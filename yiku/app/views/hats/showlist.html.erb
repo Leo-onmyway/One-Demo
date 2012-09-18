@@ -1,0 +1,42 @@
+<h3>Article List</h3>
+
+<br/>
+
+ <% if @hats.empty? %>
+
+   <img src="/images/nav_t.png" width="200" height="245" alt="No Photo Available Yet!" align=""/>
+ 
+ <% else %>
+   <ul>
+    <% for hat in @hats %>
+      <li>
+      	<a href="/yiku/item_a/view&<%= hat.id %>"><%= hat.name %></a>
+      	 ... 
+      	<a href="/yiku/item_a/edit&<%= hat.id %>"><label title="Edit" onmouseover="">Edit</label></a>
+      	 / 
+      	<a href="/yiku/item_a/delete&<%= hat.id %>"><label title="Delete">Delete</label></a>
+      </li>
+      
+    <% end %>
+   </ul>
+   
+ <% end %>
+ 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<label>
+ 	<a href="/yiku/item_a/new">
+ 		<b>Add New Article</b>
+ 	</a>
+</label>
+
+

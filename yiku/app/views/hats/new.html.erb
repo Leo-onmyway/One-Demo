@@ -1,0 +1,26 @@
+
+<h3> About the new article</h3>
+<br />
+<%= form_for(@hat, :url=>{:action=>'create'}, :multipart=>true) do |f| %>
+  <p>Name&nbsp;<%= f.text_field :name %></p>
+    
+  <p>Price&nbsp;&nbsp;<%= f.text_field :price %></p>
+  
+  <p>Size&nbsp;&nbsp;&nbsp;<%= f.text_field :size %></p>
+  
+  <p>Mater&nbsp;<%= f.text_field :material %></p>
+  
+  <p>Color&nbsp;&nbsp;<%= f.text_field :color %></p>
+  
+  <p>Brand&nbsp;<%= f.text_field :brand %></p>
+  
+  <!-- p>Image Browser<br /><%= f.file_field :image_url %></p -->
+  <p>Image<%= f.file_field :image_url %></p>
+  
+  
+  
+  <p>Detail&nbsp;<%= f.text_field :description %></p>
+  
+  <p><%= f.submit "Create" %></p>
+  
+<% end %>
