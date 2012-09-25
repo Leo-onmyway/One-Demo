@@ -48,14 +48,14 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .headerMain {
 	height: 52px;
 	width: 100%;
-    background-color: #B160C0;
+    background-color: #FFFFFF;
     margin: 0;
 }
 
 .header1 {
 
-	width: 20%;
-	background-color: #B160C0;
+	width: 55%;
+	background-color: Red;
 	float: left;
     
 }
@@ -63,7 +63,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .header2 {
 
 	width: 35%;
-	background-color: #B160C0;
+	background-color: #FFFFFF;
 	float: left;
 
 }
@@ -71,7 +71,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .header3 {
 
 	width: 45%;
-	background-color: #B160C0;
+	background-color: #FFFFFF;
 	float: left;
 
 }
@@ -79,7 +79,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .header4 {
 
 	width: 50%;
-	background-color: #B160C0;
+	background-color: #FFFFFF;
 	float: right;
 
 }
