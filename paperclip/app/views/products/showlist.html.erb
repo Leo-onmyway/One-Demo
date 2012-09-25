@@ -1,0 +1,25 @@
+
+
+ <% if @products.empty? %>
+
+   <img src="" width="200" height="245" alt="No Photo Available Yet!" align=""/>
+ 
+ <% else %>
+   <ul>
+    <% for hat in @products %>
+      <li>
+      	<a href="/products/view&<%= hat.id %>"><%= hat.name %></a>
+        
+      </li>
+      
+    <% end %>
+   </ul>
+   
+ <% end %>
+ 
+
+
+
+
+
+
