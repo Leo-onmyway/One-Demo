@@ -5,7 +5,6 @@
   <title>Demo</title>
   <%= stylesheet_link_tag 'gallery.css' %>
   <%= javascript_include_tag 'slider.js' %>
-  <%= javascript_include_tag 'load.js' %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -20,12 +19,12 @@
 				<div id="photoView" class="nph_cnt">
 					<i></i><img src="/images/80LDC1B543UD0031.jpg" id="photo">
 				</div>
-				<!-- div class="nph_photo_prev">
+				<div class="nph_photo_prev">
 					<a id="photoPrev" class="nph_btn_pphoto" target="_self" hidefocus="true" href="http://www.jsfoot.com/js/demo/2012-05-06/591.html#p=7DOBC5MA00AO0001"></a>
-				</div -->
-				<!-- div class="nph_photo_next">
+				</div>
+				<div class="nph_photo_next">
 					<a id="photoNext" class="nph_btn_nphoto" target="_self" hidefocus="true" href="http://www.jsfoot.com/js/demo/2012-05-06/591.html#p=7DOBC21A00AO0001"></a>
-				</div -->
+				</div>
 			</div>
 			<!--nph_photo_view end-->
 			
@@ -34,7 +33,7 @@
 					<div class="nph_set_info">
 						<div id="setInfo">
 							<div class="nph_set_title">
-								<span id="photoType" class="nph_set_cur">[<span class="nph_c_lh" id="photoIndex">7</span>/11]</span>
+								<span id="photoType" class="nph_set_cur">（<span class="nph_c_lh" id="photoIndex">7</span>/11）</span>
 								<h1>Demo Show</h1>
 							</div>
 						</div>
@@ -57,7 +56,7 @@
 											<div class="nph_scrl_main" id="nph_scrl_main">
 												<ul id="thumb" class="nph_list_thumb clearfix" style="width:1180px;">
 <li class="nph_list_active">
-<a href="javascript:aa('/images/80LDC11R43UD0031.jpg')" hidefocus="true"><img src="/images/s_80LDC1RI43UD0031.jpg" alt="Pic 1"></a>
+<a href="/upload/result#p=80LDC1RI43UD0031" hidefocus="true"><img src="/images/s_80LDC1RI43UD0031.jpg" alt="Pic 1"></a>
 <p>Pic 1</p>
 <i title="img">/images/80LDC1RI43UD0031.jpg</i>
 <i title="timg">/images/t_80LDC1RI43UD0031.jpg</i>
