@@ -6,7 +6,7 @@ body{font-size:12px; font:Arial, Helvetica, sans-serif,"宋体"; color:#400060;l
 .clearfix{*zoom:1;}
 .clearfix:after {clear:both;height:0;overflow:hidden;display:block;visibility:hidden;content:".";}
 .hidden{display:hidden;}
-.nph_area{margin:0 auto;width:960px;overflow:hidden;text-align:left;}
+.nph_area{margin:0 auto;width:1160px;overflow:hidden;text-align:left;}
 .nph_gallery{text-align:left;word-wrap:break-word;}
 .nph_gallery p{margin:0;line-height:21px;}
 .nph_cnt{margin:0 3.125%;}
