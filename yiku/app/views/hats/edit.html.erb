@@ -1,10 +1,13 @@
+<div class="content">
+
 <h3> About the new article</h3>
 <br />
 <%= form_for(@hat,:url=>{:action=>'update'}) do |f| %>
   
   <!-- The most important field: ID-->
   <%= f.hidden_field :id %>
-            
+  
+  <div class="description">          
   <p>Name&nbsp;<%= f.text_field :name %></p>
     
   <p>Price&nbsp;&nbsp;<%= f.text_field :price %></p>
@@ -19,10 +22,16 @@
   
   <!-- p>Image<%= f.file_field :image_url %></p -->
   
-  <img src="<%= @hat.image_url %>" align=left />
-  
   <p>Detail&nbsp;<%= f.text_field :description %></p>
   
   <p><%= f.submit "Update" %></p>
   
+  </div>
+  
+  <div class="picshow">
+  <img src="<%= @hat.image_url %>" align=left />
+  </div>
+  
 <% end %>
+
+</div>

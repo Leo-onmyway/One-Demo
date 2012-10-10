@@ -103,11 +103,19 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 }
 .content {
 	
-	height: 100%;
+	height: 95%;
 	padding: 10px 0;
 	width: 85%;
 	float: left;
 	background-color: #e6dacf;
+}
+
+.label {
+	width: 85%;
+	height: 5%;
+	float: left;
+	background-color: #e6dacf;
+	position: relative;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -148,6 +156,32 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	background-color: #11DACF;
 	position: relative;/* this gives IE6 hasLayout to properly clear */
 	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+
+.picshow {
+	width: 50%;
+	margin: 0 auto;
+    height: 100%;
+	float: left;
+}
+.description {
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+
+span.itemname {
+  background-color:#ffcc00;
+  display:-moz-inline-box;
+  display:inline-block;
+  width:150px;
+}
+
+span.seprator {
+  display:-moz-inline-box;
+  display:inline-block;
+  width:5px;
 }
 
 /* ~~ miscellaneous float/clear classes ~~ */

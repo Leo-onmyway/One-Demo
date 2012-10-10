@@ -1,3 +1,5 @@
+<div class="content">
+
 <h3>Article List</h3>
 
 <br/>
@@ -10,33 +12,29 @@
    <ul>
     <% for hat in @hats %>
       <li>
-      	<a href="/yiku/item_a/view&<%= hat.id %>"><%= hat.name %></a>
-      	 ... 
+      	
+      	 <span class="itemname"><a href="/yiku/item_a/view&<%= hat.id %>"><%= hat.name %></a></span> 
       	<a href="/yiku/item_a/edit&<%= hat.id %>"><label title="Edit" onmouseover="">Edit</label></a>
-      	 / 
+      	 <span class="seprator">/</span> 
       	<a href="/yiku/item_a/delete&<%= hat.id %>"><label title="Delete">Delete</label></a>
+      	
       </li>
       
+      <br/>
+
     <% end %>
    </ul>
    
  <% end %>
  
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
+</div>
 
-<label>
+<div class="label">
+    <label style="padding-left: 5px">
  	<a href="/yiku/item_a/new">
  		<b>Add New Article</b>
  	</a>
 </label>
-
-
+</div>
