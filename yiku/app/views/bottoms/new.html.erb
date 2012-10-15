@@ -2,9 +2,7 @@
 	
 <h3> About the new article</h3>
 <br />
-
-<%= form_for(@hat, :url=>{:action=>'create'}, :multipart=>true) do |f| %>
-
+<%= form_for(@bottom, :url=>{:action=>'create'}, :multipart=>true) do |f| %>
   <p>Name&nbsp;<%= f.text_field :name %></p>
     
   <p>Price&nbsp;&nbsp;<%= f.text_field :price %></p>
@@ -16,8 +14,6 @@
   <p>Color&nbsp;&nbsp;<%= f.text_field :color %></p>
   
   <p>Brand&nbsp;<%= f.text_field :brand %></p>
-  
-  <!-- p>Image<%= f.file_field :image_url %></p -->
   
   <p>
   	<%= f.label :photo, "Photo" %>    

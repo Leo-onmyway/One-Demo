@@ -1,8 +1,9 @@
 <div class="content">
 
 <div class="picshow">
-<p>
-  <img src="<%= @hat.image_url %>" align=left />
+<p align="left">
+  <!-- img src="<%= @hat.image_url %>" align=left / -->
+  <%= image_tag @hat.photo.url(:original) %>
 </p>
 </div>
 <div class="description">

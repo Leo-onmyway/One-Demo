@@ -12,14 +12,42 @@ Yiku::Application.routes.draw do
   # So if match '/temp/' to 'items#blank', page not found will happen during runtime
   match '/yiku/' => 'items#myyiku'
   
-  # For article A
-  match '/yiku/item_a/showlist/' => 'hats#showlist'
-  match '/yiku/item_a/new' => 'hats#new'
-  match '/yiku/item_a/create' => 'hats#create'
-  match '/yiku/item_a/view&:id' => 'hats#view'
-  match '/yiku/item_a/edit&:id' => 'hats#edit'
-  match '/yiku/item_a/update' => 'hats#update'
-  match '/yiku/item_a/delete&:id' => 'hats#delete'
+  # For Hat
+  match '/yiku/hat/showlist/' => 'hats#showlist'
+  match '/yiku/hat/new' => 'hats#new'
+  match '/yiku/hat/create' => 'hats#create'
+  match '/yiku/hat/view&:id' => 'hats#view'
+  match '/yiku/hat/edit&:id' => 'hats#edit'
+  match '/yiku/hat/update' => 'hats#update'
+  match '/yiku/hat/delete&:id' => 'hats#delete'
+  
+  # For Top
+  match '/yiku/top/showlist/' => 'tops#showlist'
+  match '/yiku/top/new' => 'tops#new'
+  match '/yiku/top/create' => 'tops#create'
+  match '/yiku/top/view&:id' => 'tops#view'
+  match '/yiku/top/edit&:id' => 'tops#edit'
+  match '/yiku/top/update' => 'tops#update'
+  match '/yiku/top/delete&:id' => 'tops#delete'
+  
+  # For Bottom
+  match '/yiku/bottom/showlist/' => 'bottoms#showlist'
+  match '/yiku/bottom/new' => 'bottoms#new'
+  match '/yiku/bottom/create' => 'bottoms#create'
+  match '/yiku/bottom/view&:id' => 'bottoms#view'
+  match '/yiku/bottom/edit&:id' => 'bottoms#edit'
+  match '/yiku/bottom/update' => 'bottoms#update'
+  match '/yiku/bottom/delete&:id' => 'bottoms#delete'
+  
+  # For Shoes
+  match '/yiku/shoe/showlist/' => 'shoes#showlist'
+  match '/yiku/shoe/new' => 'shoes#new'
+  match '/yiku/shoe/create' => 'shoes#create'
+  match '/yiku/shoe/view&:id' => 'shoes#view'
+  match '/yiku/shoe/edit&:id' => 'shoes#edit'
+  match '/yiku/shoe/update' => 'shoes#update'
+  match '/yiku/shoe/delete&:id' => 'shoes#delete'
+  
   
   match '/yiku/temp/' => 'blank#blank'
   

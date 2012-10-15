@@ -4,19 +4,19 @@
 
 <br/>
 
- <% if @hats.empty? %>
+ <% if @tops.empty? %>
 
    <img src="/images/nav_t.png" width="200" height="245" alt="No Photo Available Yet!" align=""/>
  
  <% else %>
    <ul>
-    <% for hat in @hats %>
+    <% for top in @tops %>
       <li>
       	
-      	 <span class="itemname"><a href="/yiku/hat/view&<%= hat.id %>"><%= hat.name %></a></span> 
-      	<a href="/yiku/hat/edit&<%= hat.id %>"><label title="Edit" onmouseover="">Edit</label></a>
+      	 <span class="itemname"><a href="/yiku/top/view&<%= top.id %>"><%= top.name %></a></span> 
+      	<a href="/yiku/top/edit&<%= top.id %>"><label title="Edit" onmouseover="">Edit</label></a>
       	 <span class="seprator">/</span> 
-      	<a href="javascript:openwin('/yiku/hat/delete&<%= hat.id %>')"><label title="Delete">Delete</label></a>
+      	<a href="javascript:openwin('/yiku/top/delete&<%= top.id %>')"><label title="Delete">Delete</label></a>
       	
       </li>
       
@@ -33,7 +33,7 @@
 
 <div class="label">
     <label style="padding-left: 5px">
- 	<a href="/yiku/hat/new">
+ 	<a href="/yiku/top/new">
  		<b>Add New Article</b>
  	</a>
 </label>

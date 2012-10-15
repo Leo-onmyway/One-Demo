@@ -22,16 +22,16 @@ class HatsController < ApplicationController
   # make article persistent 
   def create
     
-    uploaded_io = params[:hat][:image_url]
-    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-       file.write(uploaded_io.read)
-    end
+    # uploaded_io = params[:hat][:image_url]
+    # File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+       # file.write(uploaded_io.read)
+    # end
     
-    params[:hat][:image_url] = "/uploads/" + uploaded_io.original_filename
+    # params[:hat][:image_url] = "/uploads/" + uploaded_io.original_filename
     @hat = Hat.new(params[:hat])
     @hat.save
     
-    redirect_to "/yiku/item_a/showlist/"
+    redirect_to "/yiku/hat/showlist/"
   end
   
   # view details of article
@@ -48,14 +48,14 @@ class HatsController < ApplicationController
   def update
     @hat = Hat.find(params[:hat][:id])
     @hat.update_attributes(params[:hat])
-    redirect_to "/yiku/item_a/view&#{@hat.id}"
+    redirect_to "/yiku/hat/view&#{@hat.id}"
   end
   
   # remove article
   def delete
     @hat = Hat.find(params[:id])
     @hat.destroy
-    redirect_to "/yiku/item_a/showlist/"
+    redirect_to "/yiku/hat/showlist/"
   end
   
 end

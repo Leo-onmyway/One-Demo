@@ -1,0 +1,38 @@
+<div class="content">
+
+<div class="picshow">
+<p align="left"">
+  <%= image_tag @shoe.photo.url(:original) %>
+</p>
+</div>
+<div class="description">
+<p>
+  <b> &nbsp;Name: </b><%= @shoe.name %>
+ </p>
+ 
+<p>
+  <b> &nbsp;Price: </b><%= @shoe.price %>
+</p>
+
+<p>
+  <b> &nbsp;Material: </b><%= @shoe.material %>
+</p>
+
+<p>
+  <b> &nbsp;Brand: </b><%= @shoe.brand %>
+</p>
+
+<p>
+  <b> &nbsp;Color: </b><%= @shoe.color %>
+</p>
+
+<p>
+  <b> &nbsp;Size: </b><%= @shoe.size %>
+</p>
+
+<p>
+  <b> &nbsp;Detail: </b><%= @shoe.description %>
+</p>
+</div>
+
+</div>

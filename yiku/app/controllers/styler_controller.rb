@@ -1,0 +1,2 @@
+class StylerController < ApplicationController
+end
