@@ -78,7 +78,7 @@ body{font-size:12px; font:Arial, Helvetica, sans-serif,"宋体"; color:#400060;l
 .nph_btn_scrl:hover .nph_btn_ct{background-position:-11px -16px;}
 .nph_btn_scrl .nph_btn_bd span{background:url(/images/bg07.png) repeat-x 0 -32px;}
 .nph_btn_scrl:hover .nph_btn_bd span{background-position:0 -48px;}
-.nph_btn_pphoto{display:block;width:100%;height:100%;outline:none;cursor:url(http://img1.cache.netease.com/cnews/img/gallery11/bg11.cur), auto;}
-.nph_btn_nphoto{display:block;width:100%;height:100%;outline:none;cursor:url(http://img1.cache.netease.com/cnews/img/gallery11/bg12.cur), auto;}
+.nph_btn_pphoto{display:block;width:100%;height:100%;outline:none;cursor:url(/images/bg11.cur), auto;}
+.nph_btn_nphoto{display:block;width:100%;height:100%;outline:none;cursor:url(/images/bg12.cur), auto;}
 .nph_gallery .nph_c_lh{color:#E53333;}
 .nph_photo_view{height:600px;}

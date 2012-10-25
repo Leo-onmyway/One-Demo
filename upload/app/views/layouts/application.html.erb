@@ -4,16 +4,31 @@
 <head>
   <title>Demo</title>
   <%= stylesheet_link_tag 'gallery.css' %>
+  <%= stylesheet_link_tag 'popup.css'%>
   <%= javascript_include_tag 'slider.js' %>
   <%= javascript_include_tag 'load.js' %>
   <!-- %= javascript_include_tag 'demoslider.js' % -->
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+
+<body id="body">
 
 <div class="nph_area">
-
+<!-- Mimic Modal Window -->
+<input type="button" value="测试按钮" onClick="show()"/>
+<div id="div1" class="div1"></div><!--这是要覆盖网页的层，不必写任何东西-->
+   <div id="div2" class="div2"><!--这是弹出的模式窗口层-->
+       <!--嵌套在层中的层，用来做标题栏，按个人需求定义-->
+       <div id="div3" style="width:100%;height:20px; background-color:#0099FF" align="right">
+               <label onClick="closeShow()" style="font-weight:bolder;cursor:hand">
+                     关闭&nbsp;&nbsp;<!--用来关闭显示，在label中加了onclick事件，与鼠标悬停手的样式-->
+               </label>
+        </div>
+       <br>
+          这个模式窗口很简单吧！
+    </div>
+<!-- End Mimic -->
 <div id="gallery" class="nph_gallery clearfix">
 	<div class="nph_bg">
 		<div class="nph_photo" id="modePhoto">
@@ -66,13 +81,13 @@
 <i title="timg">/images/t_80LDC1RI43UD0031.jpg</i>
 </li>
 <li class="">
-<a href="/upload/result#p=80LDBVG943UD0031" hidefocus="true"><img src="/images/s_80LDBVG943UD0031.jpg" alt="Pic 2"></a>
+<a href="javascript:aa('/images/80LDBVG943UD0031.jpg')" hidefocus="true"><img src="/images/s_80LDBVG943UD0031.jpg" alt="Pic 2"></a>
 <p>Pic 2</p>
 <i title="img">/images/80LDBVG943UD0031.jpg</i>
 <i title="timg">/images/t_80LDBVG943UD0031.jpg</i>
 </li>
 <li class="">
-<a href="/upload/result#p=80LDC4EG43UD0031" hidefocus="true"><img src="/images/s_80LDC4EG43UD0031.jpg" alt="Pic 3"></a>
+<a href="javascript:aa('/images/80LDC4EG43UD0031.jpg')" hidefocus="true"><img src="/images/s_80LDC4EG43UD0031.jpg" alt="Pic 3"></a>
 <p>Pic 3</p>
 <i title="img">/images/80LDC4EG43UD0031.jpg</i>
 <i title="timg">/images/t_80LDC4EG43UD0031.jpg</i>
@@ -354,6 +369,7 @@ $.addEvent(photoPrev2, function(){
 	
 },"click");
 </script>
+
 
 <%= yield %>
 
