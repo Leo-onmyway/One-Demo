@@ -33,13 +33,16 @@
 </style>
 
 <style>
-    #resizable { margin: 30px 200px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1070 }	
-	#resizable2 { margin: 130px 200px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1050 }
+    #resizable { margin: 150px 100px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1070 }	
+	#resizable2 { margin: 130px 300px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1050 }
+	#resizable3 { margin: 230px 300px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1030 }
+	#resizable4 { margin: 150px 500px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1010 }
 </style>
 </head>
 <body>
  
 <button id="opener">Save</button>
+
 <div id="dialog" title="Save Your Suit ?">
 </div>
 
@@ -50,6 +53,12 @@
     	<% end %>
     	<% if @top != nil %>
            <img src="<%= @top.photo.url(:thumb) %>" class="drag-image" id="resizable2"/>
+        <% end %>
+        <% if @bottom != nil %>
+           <img src="<%= @bottom.photo.url(:thumb) %>" class="drag-image" id="resizable3"/>
+        <% end %>
+        <% if @shoe != nil %>
+           <img src="<%= @shoe.photo.url(:thumb) %>" class="drag-image" id="resizable4"/>
         <% end %>
     </div>  
 </div>

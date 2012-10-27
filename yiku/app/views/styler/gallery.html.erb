@@ -33,20 +33,21 @@
 			</div>
 			<!--nph_photo_view end-->
 			
+			<!-- The slider show of hats -->
 			<div class="nph_cnt">
 				<div class="nph_cnt clearfix">
 					<div class="nph_set_info">
 						<div id="setInfo">
 							<div class="nph_set_title">
 								<span id="photoType" class="nph_set_cur">[<span class="nph_c_lh" id="photoIndex">7</span>/10]</span>
-								<h1>Demo Show</h1>
+								<h1>Hats Show</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<div id="photoDesc" class="nph_photo_desc">
-					<p>Demo Picture</p>
+					<p>Hats Picture</p>
 				</div>
 			</div><!--nph_cnt end-->
 			
@@ -60,7 +61,7 @@
 										<div class="nph_scrl_thumb">
 											<div class="nph_scrl_main" id="nph_scrl_main">
 												<ul id="thumb" class="nph_list_thumb clearfix" style="width:1810px;"> <!-- width = n*100 + 110 -->
-<!-- Loop for slider show of hat -->
+<!-- Loop for slider show of hats -->
 <% i = 0 %>
 <% for hat in @hats %>
 
@@ -70,7 +71,7 @@
       <li class="">	
    <% end %>
    
-      <a href="javascript:loadPic(<%= hat.id %>)" hidefocus="true"><img src="<%= hat.photo.url(:thumb) %>" alt="Picture Not Available Temporarily"></a>
+      <a href="javascript:loadPic(<%= hat.id %>)" hidefocus="true"><img src="<%= hat.photo.url(:small) %>" alt="Picture Not Available Temporarily"></a>
       <p><%= hat.name %></p>
       <i title="img"><%= hat.photo.url(:original) %></i>
       </li>
@@ -108,7 +109,7 @@
 				</div>
 			</div>
 			
-			<!-- The 2nd slider show-->
+			<!-- The slider show of tops -->
 			
 			<div class="nph_cnt">
 				<div class="nph_cnt clearfix">
@@ -116,14 +117,14 @@
 						<div id="setInfo2">
 							<div class="nph_set_title">
 								<span id="photoType2" class="nph_set_cur">[<span class="nph_c_lh" id="photoIndex2">7</span>/10]</span>
-								<h1>Demo Show 2</h1>
+								<h1>Tops Show</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<div id="photoDesc2" class="nph_photo_desc">
-					<p>Demo Picture</p>
+					<p>Tops Picture</p>
 				</div>
 			</div><!--nph_cnt end-->
 			
@@ -137,7 +138,7 @@
 										<div class="nph_scrl_thumb">
 											<div class="nph_scrl_main" id="nph_scrl_main2">
 												<ul id="thumb2" class="nph_list_thumb clearfix" style="width:1810px;"> <!-- width = n*100 + 110 -->
-<!-- Loop for slider show of hat -->
+<!-- Loop for slider show of tops -->
 <% j = 0 %>
 <% for top in @tops %>
 
@@ -147,7 +148,7 @@
       <li class="">	
    <% end %>
    
-      <a href="javascript:loadPic2('<%= top.id %>')" hidefocus="true"><img src="<%= top.photo.url(:thumb) %>" alt="Picture Not Available Temporarily"></a>
+      <a href="javascript:loadPic2('<%= top.id %>')" hidefocus="true"><img src="<%= top.photo.url(:small) %>" alt="Picture Not Available Temporarily"></a>
       <p><%= top.name %></p>
       <i title="img"><%= top.photo.url(:original) %></i>
       </li>
@@ -186,12 +187,169 @@
 				</div>
 			</div>
 			
+			<!-- The slider show of bottoms -->
+			
+			<div class="nph_cnt">
+				<div class="nph_cnt clearfix">
+					<div class="nph_set_info">
+						<div id="setInfo3">
+							<div class="nph_set_title">
+								<span id="photoType3" class="nph_set_cur">[<span class="nph_c_lh" id="photoIndex3">7</span>/10]</span>
+								<h1>Bottoms Show</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="photoDesc3" class="nph_photo_desc">
+					<p>Bottoms Picture</p>
+				</div>
+			</div><!--nph_cnt end-->
+			
+			<div class="nph_cnt">
+				<div class="clearfix">
+					<div class="nph_set">
+						<div class="nph_set_thumb">
+							<div id="scrl3" class="nph_photo_thumb clearfix" style="width:589px;">
+								<div class="clearfix">
+									<div class="nph_scrl">
+										<div class="nph_scrl_thumb">
+											<div class="nph_scrl_main" id="nph_scrl_main3">
+												<ul id="thumb3" class="nph_list_thumb clearfix" style="width:1810px;"> <!-- width = n*100 + 110 -->
+<!-- Loop for slider show of bottoms -->
+<% m = 0 %>
+<% for bottom in @bottoms %>
+
+   <% if m == 0 %>
+      <li class="nph_list_active">
+   <% else %>
+      <li class="">	
+   <% end %>
+   
+      <a href="javascript:loadPic3('<%= bottom.id %>')" hidefocus="true"><img src="<%= bottom.photo.url(:small) %>" alt="Picture Not Available Temporarily"></a>
+      <p><%= bottom.name %></p>
+      <i title="img"><%= bottom.photo.url(:original) %></i>
+      </li>
+
+   <% m += 1 %>
+<% end %>
+<!-- Loop end -->
+
+												</ul>
+											</div>
+											
+											<div class="nph_scrl_bar clearfix">
+												<span class="nph_scrl_lt"></span>
+												<span class="nph_scrl_rt"></span>
+												<div class="nph_scrl_bd">
+													<div class="nph_scrl_ct" id="nph_scrl_ct3" tabindex="-1" style="outline: none; ">
+														<a id="bar3" class="nph_btn_scrl" style="cursor: move; left: 487px; ">
+															<b class="nph_btn_lt"></b>
+															<b class="nph_btn_rt"></b>
+															<span class="nph_btn_bd"><span><b class="nph_btn_ct"></b></span></span>
+														</a>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									
+									<span class="nph_scrl_prev"><a id="scrlPrev3" class="nph_btn_pscrl" hidefocus="true" href="javascript:void(0)"></a></span>
+									<span class="nph_scrl_next"><a id="scrlNext3" class="nph_btn_nscrl" hidefocus="true" href="javascript:void(0)"></a></span>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- The slider show of shoes -->
+			
+			<div class="nph_cnt">
+				<div class="nph_cnt clearfix">
+					<div class="nph_set_info">
+						<div id="setInfo4">
+							<div class="nph_set_title">
+								<span id="photoType4" class="nph_set_cur">[<span class="nph_c_lh" id="photoIndex4">7</span>/10]</span>
+								<h1>Shoes Show</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="photoDesc4" class="nph_photo_desc">
+					<p>Shoes Picture</p>
+				</div>
+			</div><!--nph_cnt end-->
+			
+			<div class="nph_cnt">
+				<div class="clearfix">
+					<div class="nph_set">
+						<div class="nph_set_thumb">
+							<div id="scrl4" class="nph_photo_thumb clearfix" style="width:589px;">
+								<div class="clearfix">
+									<div class="nph_scrl">
+										<div class="nph_scrl_thumb">
+											<div class="nph_scrl_main" id="nph_scrl_main4">
+												<ul id="thumb4" class="nph_list_thumb clearfix" style="width:1810px;"> <!-- width = n*100 + 110 -->
+<!-- Loop for slider show of shoes -->
+<% n = 0 %>
+<% for shoe in @shoes %>
+
+   <% if n == 0 %>
+      <li class="nph_list_active">
+   <% else %>
+      <li class="">	
+   <% end %>
+   
+      <a href="javascript:loadPic4('<%= shoe.id %>')" hidefocus="true"><img src="<%= shoe.photo.url(:small) %>" alt="Picture Not Available Temporarily"></a>
+      <p><%= shoe.name %></p>
+      <i title="img"><%= shoe.photo.url(:original) %></i>
+      </li>
+
+   <% n += 1 %>
+<% end %>
+<!-- Loop end -->
+
+												</ul>
+											</div>
+											
+											<div class="nph_scrl_bar clearfix">
+												<span class="nph_scrl_lt"></span>
+												<span class="nph_scrl_rt"></span>
+												<div class="nph_scrl_bd">
+													<div class="nph_scrl_ct" id="nph_scrl_ct4" tabindex="-1" style="outline: none; ">
+														<a id="bar4" class="nph_btn_scrl" style="cursor: move; left: 487px; ">
+															<b class="nph_btn_lt"></b>
+															<b class="nph_btn_rt"></b>
+															<span class="nph_btn_bd"><span><b class="nph_btn_ct"></b></span></span>
+														</a>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									
+									<span class="nph_scrl_prev"><a id="scrlPrev4" class="nph_btn_pscrl" hidefocus="true" href="javascript:void(0)"></a></span>
+									<span class="nph_scrl_next"><a id="scrlNext4" class="nph_btn_nscrl" hidefocus="true" href="javascript:void(0)"></a></span>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </div><!--gallery end-->
 
 </div>
 
+<!-- For the slider of hats -->
 <script type="text/javascript">
 var slider = new Slider({
 	icontainer : "nph_scrl_ct",
@@ -273,7 +431,7 @@ $.addEvent(photoPrev, function(){
 },"click");
 </script>
 
-<!-- For the 2nd slider-->
+<!-- For the slider of tops -->
 <script type="text/javascript">
 var slider2 = new Slider({
 	icontainer : "nph_scrl_ct2",
@@ -351,6 +509,170 @@ $.addEvent(photoPrev2, function(){
 		return;
 	}
 	Go2(index2, list2[index2]);
+	
+},"click");
+</script>
+
+<!-- For the slider of bottoms -->
+<script type="text/javascript">
+var slider3 = new Slider({
+	icontainer : "nph_scrl_ct3",
+	idrag : "bar3",
+	plusBtn : "scrlPrev3",
+	reduceBtn : "scrlNext3",
+	panel : "thumb3",
+	content : "nph_scrl_main3",	
+	direction : "left",
+	acceleration : 5,
+	sliderAcc : 1		
+});
+
+var ul3 = $.get("nph_scrl_main3"),
+	realUl3 = $.get("thumb3"),
+	list3 = realUl3.getElementsByTagName("li"),
+	len3 = list3.length,
+	intervalD3 = Math.ceil( ul3.scrollWidth / len3 ),
+	intervalS3 = Math.ceil( slider3.Max.left / len3 ),
+	index3 = 1,
+	photoPrev3 = $.get("photoPrev3"),
+	photoNext3 = $.get("photoNext3"),
+	photo3 = $.get("photo3"),
+	photoIndex3 = $.get("photoIndex3"),
+	photoDesc3 = $.get("photoDesc3").getElementsByTagName("p")[0];
+
+function removeClass3(){
+	$.each(list3, function(o, i){
+		o.className = "";
+	});
+}
+
+function Go3(i, o){
+	index3 = i;
+	var _distance = 0;
+	if(i > 2){
+		slider3.content.scrollLeft = intervalD3 * (i - 2);		
+	}else{
+		slider3.content.scrollLeft = 0;
+	}
+	_distance = intervalS3 * i;
+	if(i === len3 - 1){
+		_distance = intervalS3 * (i + 1);
+	}
+	slider3.idrag.style.left = Math.min(Math.max(_distance , 0),slider3.Max.left)  + "px"
+	removeClass3();
+	o.className = "nph_list_active";
+	photo3.src = o.getElementsByTagName("i")[0].innerHTML;
+	photoDesc3.innerHTML = o.getElementsByTagName("p")[0].innerHTML;
+	photoIndex3.innerHTML = i + 1;
+}
+
+Go3(0, list3[0]);
+	
+$.each(list3, function(o, i){
+	$.addEvent(o, function(){
+		Go3(i, o);		
+	},"click");
+});
+
+$.addEvent(photoNext3, function(){
+	index3++;
+	if(index3 >= len3){
+		index3 = len3 - 1;
+		return;
+	}
+	Go3(index3, list3[index3]);
+	
+},"click");
+
+$.addEvent(photoPrev3, function(){
+	index3--;
+	if(index3 < 0 ){
+		index3 = 0;
+		return;
+	}
+	Go3(index3, list3[index3]);
+	
+},"click");
+</script>
+
+<!-- For the slider of shoes -->
+<script type="text/javascript">
+var slider4 = new Slider({
+	icontainer : "nph_scrl_ct4",
+	idrag : "bar4",
+	plusBtn : "scrlPrev4",
+	reduceBtn : "scrlNext4",
+	panel : "thumb4",
+	content : "nph_scrl_main4",	
+	direction : "left",
+	acceleration : 5,
+	sliderAcc : 1		
+});
+
+var ul4 = $.get("nph_scrl_main4"),
+	realUl4 = $.get("thumb4"),
+	list4 = realUl4.getElementsByTagName("li"),
+	len4 = list4.length,
+	intervalD4 = Math.ceil( ul4.scrollWidth / len4 ),
+	intervalS4 = Math.ceil( slider4.Max.left / len4 ),
+	index4 = 1,
+	photoPrev4 = $.get("photoPrev4"),
+	photoNext4 = $.get("photoNext4"),
+	photo4 = $.get("photo4"),
+	photoIndex4 = $.get("photoIndex4"),
+	photoDesc4 = $.get("photoDesc4").getElementsByTagName("p")[0];
+
+function removeClass4(){
+	$.each(list4, function(o, i){
+		o.className = "";
+	});
+}
+
+function Go4(i, o){
+	index4 = i;
+	var _distance = 0;
+	if(i > 2){
+		slider4.content.scrollLeft = intervalD4 * (i - 2);		
+	}else{
+		slider4.content.scrollLeft = 0;
+	}
+	_distance = intervalS4 * i;
+	if(i === len4 - 1){
+		_distance = intervalS4 * (i + 1);
+	}
+	slider4.idrag.style.left = Math.min(Math.max(_distance , 0),slider4.Max.left)  + "px"
+	removeClass4();
+	o.className = "nph_list_active";
+	photo4.src = o.getElementsByTagName("i")[0].innerHTML;
+	photoDesc4.innerHTML = o.getElementsByTagName("p")[0].innerHTML;
+	photoIndex4.innerHTML = i + 1;
+}
+
+Go4(0, list4[0]);
+	
+$.each(list4, function(o, i){
+	$.addEvent(o, function(){
+		Go4(i, o);		
+	},"click");
+});
+
+$.addEvent(photoNext4, function(){
+	index4++;
+	if(index4 >= len4){
+		index4 = len4 - 1;
+		return;
+	}
+	Go4(index4, list4[index4]);
+	
+},"click");
+
+$.addEvent(photoPrev4, function(){
+	index4--;
+	if(index4 < 0 ){
+		index4 = 0;
+		return;
+	}
+	Go4(index4, list4[index4]);
 	
 },"click");
 </script>
