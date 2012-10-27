@@ -11,23 +11,50 @@ function   openwin(url)
         }   
   } 
   
+var urlArray = [-1,-1,-1,-1];
   
-function loadPic(imgUrl) 
-  { document.getElementById("photo").src = imgUrl }  
+function loadPic(hatId) 
+  { 
+  	urlArray[0] = hatId; 
+  	document.getElementById("suitFrame").src = 
+  	            "/yiku/suit/compose&" +  
+  	            urlArray[0] + "," + 
+  	            urlArray[1] + "," +
+  	            urlArray[2] + "," + 
+  	            urlArray[3]
+  }  
 
-function loadPic2(imgUrl) 
-  { document.getElementById("photo2").src = imgUrl } 
+function loadPic2(topId) 
+  { 
+  	urlArray[1] = topId;
+  	document.getElementById("suitFrame").src = 
+  	            "/yiku/suit/compose&" +  
+  	            urlArray[0] + "," + 
+  	            urlArray[1] + "," +
+  	            urlArray[2] + "," + 
+  	            urlArray[3]
+  } 
 
-function loadPic3(imgUrl) 
-  { document.getElementById("photo3").src = imgUrl }  
+function loadPic3(bottomId) 
+  { 
+  	urlArray[2] = bottomId; 
+  	document.getElementById("suitFrame").src = 
+  	            "/yiku/suit/compose&" +  
+  	            urlArray[0] + "," + 
+  	            urlArray[1] + "," +
+  	            urlArray[2] + "," + 
+  	            urlArray[3]
+  }  
 
-function loadPic4(imgUrl) 
-  { document.getElementById("photo4").src = imgUrl }
+function loadPic4(shoesId) 
+  { 
+    urlArray[3] = shoesId;
+    document.getElementById("suitFrame").src = 
+  	            "/yiku/suit/compose&" +  
+  	            urlArray[0] + "," + 
+  	            urlArray[1] + "," +
+  	            urlArray[2] + "," + 
+  	            urlArray[3]
+  }
   
-function fnOpenModal(pageUrl){   
-  window.open(pageUrl, "", "height=100, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no")   
-}
 
-function abc(pageUrl){
-  window.showModelessDialog(pageUrl)	
-}

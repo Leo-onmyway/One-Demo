@@ -1,0 +1,11 @@
+.container {
+    margin-top: 50px;
+    cursor:move;
+}
+#screen {
+    overflow:hidden;
+    width:500px;
+    height:500px;
+    clear:both;
+    border:1px solid black;
+}

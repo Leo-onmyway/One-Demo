@@ -1,33 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>dialog demo</title>
+    <title>Compose Your Suit</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	
+	<style type="text/css">
+<!--
+.container {
+    margin-top: 20px; 
+    display: inline-block;  
+}
+#screen {
+    overflow:hidden;
+    width:700px;
+    height:500px;
+    clear:both;
+    border:1px solid black;
+    background-color: white;
+    cursor:move;
+	float: left;
+	display: inline-block;
+}
+
+#rightBar {
+	width: 200px;
+	height: 500px;
+	display: inline-block;
+}
+-->
+</style>
+
+<style>
+    #resizable { margin: 30px 200px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1070 }	
+	#resizable2 { margin: 130px 200px; width: 100px; height: 100px; background-image: none; position: absolute; z-index: 1050 }
+</style>
 </head>
 <body>
  
-<button id="opener">open the dialog</button>
-<div id="dialog" title="Dialog Title">
-<p>test</p>
-<button id="dodo">open the dialog</button>
+<button id="opener">Save</button>
+<div id="dialog" title="Save Your Suit ?">
+</div>
+
+<div class="container">
+    <div id="screen">
+    	<% if @hat != nil %>
+    	   <img src="<%= @hat.photo.url(:thumb) %>" class="drag-image" id="resizable"/>
+    	<% end %>
+    	<% if @top != nil %>
+           <img src="<%= @top.photo.url(:thumb) %>" class="drag-image" id="resizable2"/>
+        <% end %>
+    </div>  
 </div>
  
 <script>
-$( "#dialog" ).dialog({ autoOpen: false, resizable: false, width: 500, height: 300 });
+$( "#dialog" ).dialog({ autoOpen: false, resizable: false, width: 800, height: 500, zIndex: 1100, show: "slow", modal: true, closeOnEscape: true });
 $( "#opener" ).click(function() {
     $( "#dialog" ).dialog( "open" );
 });
 </script>
 
+<script type="text/javascript">
+$(function() {
+    $(".drag-image").resizable();
+});
+</script>
+
+<script type="text/javascript">
+$(function() {
+    $(".drag-image").draggable();
+});
+</script>
+ 
  <%= yield %>
  
 </body>
-  	
-  
-
 </html>

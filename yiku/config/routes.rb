@@ -53,7 +53,7 @@ Yiku::Application.routes.draw do
   
   match '/yiku/gallery' => 'styler#gallery'
   
-  match '/yiku/suit/new' => 'suits#new'
+  match '/yiku/suit/compose&:comId' => 'suits#compose'
   
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

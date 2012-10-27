@@ -14,15 +14,14 @@
 <body>
 
 <div class="nph_area">
-<a href="/yiku/">Back</a>&nbsp;/&nbsp;<a href="/yiku/suit/new">Save As Suit</a>
+<a href="/yiku/">Back</a>
 
 <div id="gallery" class="nph_gallery clearfix">
 	<div class="nph_bg">
 		<div class="nph_photo" id="modePhoto">
 			<div class="nph_photo_view">
 				<div id="photoView" class="nph_cnt">
-					<i></i><img src="<%= @hats[0].photo.url(:original)%>" id="photo">
-					<i></i><img src="<%= @tops[0].photo.url(:original)%>" id="photo2">
+					<iframe id="suitFrame" frameborder="0" height="500" src=""; target="_blank" align="center" width="900" scrolling="Auto"; bgcolor="#C9D3DE"> </iframe>
 					
 				</div>
 				<!-- div class="nph_photo_prev">
@@ -71,7 +70,7 @@
       <li class="">	
    <% end %>
    
-      <a href="javascript:loadPic('<%= hat.photo.url(:original) %>')" hidefocus="true"><img src="<%= hat.photo.url(:thumb) %>" alt="Picture Not Available Temporarily"></a>
+      <a href="javascript:loadPic(<%= hat.id %>)" hidefocus="true"><img src="<%= hat.photo.url(:thumb) %>" alt="Picture Not Available Temporarily"></a>
       <p><%= hat.name %></p>
       <i title="img"><%= hat.photo.url(:original) %></i>
       </li>
@@ -148,7 +147,7 @@
       <li class="">	
    <% end %>
    
-      <a href="javascript:loadPic2('<%= top.photo.url(:original) %>')" hidefocus="true"><img src="<%= top.photo.url(:thumb) %>" alt="Picture Not Available Temporarily"></a>
+      <a href="javascript:loadPic2('<%= top.id %>')" hidefocus="true"><img src="<%= top.photo.url(:thumb) %>" alt="Picture Not Available Temporarily"></a>
       <p><%= top.name %></p>
       <i title="img"><%= top.photo.url(:original) %></i>
       </li>
