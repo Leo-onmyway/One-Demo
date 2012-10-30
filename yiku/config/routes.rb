@@ -48,13 +48,13 @@ Yiku::Application.routes.draw do
   match '/yiku/shoe/update' => 'shoes#update'
   match '/yiku/shoe/delete&:id' => 'shoes#delete'
   
-  
-  match '/yiku/temp/' => 'blank#blank'
-  
   match '/yiku/gallery' => 'styler#gallery'
   
   match '/yiku/suit/compose&:comId' => 'suits#compose'
+  match '/yiku/suit/create' => 'suits#create'
+  match '/yiku/suit/showlist' => 'items#listsuit'
   
+  match '/yiku/temp/' => 'blank#blank'
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)

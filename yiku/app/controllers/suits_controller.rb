@@ -12,9 +12,20 @@ class SuitsController < ApplicationController
        @bottom = Bottom.find(arr[2]);
     end
     if !arr[3].eql?("-1")
-      @shoe = Shoe.find(arr[3]);
+       @shoe = Shoe.find(arr[3]);
     end
-    
+    @suit = Suit.new;
+  end
+  
+  def create
+    @suit = Suit.new(params[:suit])
+    @suit.save
+    #flash[:notice] = 'Photo was successfully created.'
+    redirect_to "/yiku/suit/compose&"+
+                params[:suit][:hat_id]+','+
+                params[:suit][:top_id]+','+
+                params[:suit][:bottom_id]+','+
+                params[:suit][:shoes_id];               
   end
   
 end

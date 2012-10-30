@@ -44,6 +44,24 @@
 <button id="opener">Save</button>
 
 <div id="dialog" title="Save Your Suit ?">
+	
+ <% if @hat==nil and @bottom==nil and @top==nil and @shoe=nil %>
+    <p><b>Please make a suit first !</b></p>
+ <% else %>	
+  <%= form_for(@suit,:url=>{:action=>'create'}) do |f| %>
+    <p><b>Name</b><br /><%= f.text_field :name %></p>
+    <p><b>Description</b><br /><%= f.text_field :description %></p>
+    <p><b>Price</b><br /><%= f.text_field :price %></p>
+    <p>
+  	  <%= f.hidden_field :hat_id, :value => @hat != nil ? @hat.id : -1 %>
+  	  <%= f.hidden_field :top_id, :value => @top != nil ? @top.id : -1  %>
+  	  <%= f.hidden_field :bottom_id, :value => @bottom != nil ? @bottom.id : -1  %>
+  	  <%= f.hidden_field :shoes_id, :value => @shoe != nil ? @shoe.id : -1  %>
+    </p>
+    <p><%= f.submit "Create" %></p> 
+  <% end %>
+ <% end %>
+	
 </div>
 
 <div class="container">

@@ -101,8 +101,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	background-color: #93A5C4;
 	padding-bottom: 20px;
 }
-.content {
-	
+.content {	
 	height: 95%;
 	padding: 10px 0;
 	width: 85%;
