@@ -10,18 +10,27 @@
  
  <% else %>
    <ul>
-    <% for hat in @hats %>
+   	<% i=0 %>
+    <% for hat in @hats %>     
       <li>
       	
-      	 <span class="itemname"><a href="/yiku/hat/view&<%= hat.id %>"><%= hat.name %></a></span> 
-      	<a href="/yiku/hat/edit&<%= hat.id %>"><label title="Edit" onmouseover="">Edit</label></a>
-      	 <span class="seprator">/</span> 
-      	<a href="javascript:openwin('/yiku/hat/delete&<%= hat.id %>')"><label title="Delete">Delete</label></a>
+      	<span class="itemname">
+      	<a href="/yiku/hat/view&<%= hat.id %>,<%= i %>">
+      		<%= hat.name %>
+      	</a>
+      	</span> 
+      	<a href="/yiku/hat/edit&<%= hat.id %>">
+      		<label title="Edit" onmouseover="">Edit</label>
+      	</a>
+      	<span class="seprator">/</span> 
+      	<a href="javascript:openwin('/yiku/hat/delete&<%= hat.id %>')">
+      		<label title="Delete">Delete</label>
+      	</a>
       	
       </li>
       
       <br/>
-
+     <% i+=1 %>
     <% end %>
    </ul>
    

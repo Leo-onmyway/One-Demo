@@ -37,3 +37,24 @@
 </div>
 
 </div>
+
+<div class="label">
+    <label style="padding-left: 5px">
+    	<% if @idPrevEntry[0].eql?("-1") %>
+ 	<a href="#">
+ 		<% else %>
+ 	<a href="/yiku/hat/view&<%= @idPrevEntry[0] %>, <%= @idPrevEntry[1] %>">
+ 		<% end %>	
+ 		<b>Previous</b>
+ 	</a>
+   </label>
+   <label style="float: right; padding-right: 5px">
+ 	<% if @idNextEntry[0].eql?("-1") %>
+ 	<a href="#">
+ 		<% else %>
+ 	<a href="/yiku/hat/view&<%= @idNextEntry[0] %>, <%= @idNextEntry[1] %>">
+ 		<% end %>	
+ 		<b>Next</b>
+ 	</a>
+   </label>
+</div>

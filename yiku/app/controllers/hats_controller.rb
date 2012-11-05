@@ -3,13 +3,20 @@ class HatsController < ApplicationController
   # show list of articles
   def showlist
     @hats = Hat.find(:all)
-
-    if @hats == nil
-      puts "nil"
+    idList = Array.new(@hats.size)
+    
+    i = 0
+    for hat in @hats     
+      idList[i] = hat.id
+      i += 1 
     end
     
+    # unless session[:idList]
+      session[:idList] = idList
+    # end
+    
     if @hats.empty?
-      puts "Nothing"
+      puts "Nothing Displayed"
     end
        
   end
@@ -35,8 +42,14 @@ class HatsController < ApplicationController
   end
   
   # view details of article
-  def view
-    @hat = Hat.find(params[:id])
+  def view    
+    idCurrEntry = params[:id].split(",")
+    
+    @hat = Hat.find(idCurrEntry[0])
+    idx = Integer(idCurrEntry[1])
+    @idPrevEntry = idx-1 >= 0 ? [session[:idList][idx-1], idx-1]  : [-1, -1]
+    @idNextEntry = session[:idList][idx+1] != nil ? [session[:idList][idx+1], idx+1] : [-1, -1] 
+    
   end
   
   # edit information of article
