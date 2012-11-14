@@ -52,7 +52,7 @@ Yiku::Application.routes.draw do
   
   match '/yiku/suit/compose&:comId' => 'suits#compose'
   match '/yiku/suit/create' => 'suits#create'
-  match '/yiku/suit/showlist' => 'items#listsuit'
+  match '/yiku/suit/showlist' => 'items#listsuits'
   
   match '/yiku/temp/' => 'blank#blank'
   # Sample of named route:

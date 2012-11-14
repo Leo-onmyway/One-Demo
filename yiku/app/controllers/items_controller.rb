@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
   
-  def listsuit
+  def listsuits
     @suits = Suit.find(:all)
   end
+  
+  
   
 end

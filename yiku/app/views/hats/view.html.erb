@@ -40,7 +40,7 @@
 
 <div class="label">
     <label style="padding-left: 5px">
-    	<% if @idPrevEntry[0].eql?("-1") %>
+    	<% if @idPrevEntry[0] == -1 %>
  	<a href="#">
  		<% else %>
  	<a href="/yiku/hat/view&<%= @idPrevEntry[0] %>, <%= @idPrevEntry[1] %>">
@@ -49,7 +49,7 @@
  	</a>
    </label>
    <label style="float: right; padding-right: 5px">
- 	<% if @idNextEntry[0].eql?("-1") %>
+ 	<% if @idNextEntry[0] == -1 %>
  	<a href="#">
  		<% else %>
  	<a href="/yiku/hat/view&<%= @idNextEntry[0] %>, <%= @idNextEntry[1] %>">
