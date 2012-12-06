@@ -1,4 +1,6 @@
 Yiku::Application.routes.draw do
+  get "user/register"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -11,6 +13,17 @@ Yiku::Application.routes.draw do
   # the same name as controller, the layout will be interpreted first then the page
   # So if match '/temp/' to 'items#blank', page not found will happen during runtime
   match '/yiku/' => 'items#myyiku'
+  
+  # For User
+  match '/yiku/user/register' => 'user#register'
+  match '/yiku/user/login' => 'user#login'
+  match '/yiku/user/view' => 'user#view'
+  match '/yiku/user/edit' => 'user#edit'
+  match '/yiku/user/logout' => 'user#logout'
+  # The route which will not displayed as a URL for end user
+  match '/yiku/user/crt' => 'user#create'
+  match '/yiku/user/upd-pwd' => 'user#update_password'
+  match '/yiku/user/upd-info' => 'user#update_others' 
   
   # For Hat
   match '/yiku/hat/showlist/' => 'hats#showlist'
@@ -55,6 +68,7 @@ Yiku::Application.routes.draw do
   match '/yiku/suit/showlist' => 'items#listsuits'
   
   match '/yiku/temp/' => 'blank#blank'
+  
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)

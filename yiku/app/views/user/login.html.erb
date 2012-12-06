@@ -1,0 +1,58 @@
+<h2>Log in</h2>
+<br/>
+<%= form_for(@user, :url=>{:action=>'login'}) do |f| %>
+  
+  <fieldset>
+    <legend>Enter Your Username&Password</legend>
+    
+    <br/>
+    
+    <div class="form_row">
+      <label for="User Name">User name:</label>
+      <%= f.text_field :user_id, :size => 20, :maxlength => 12 %>
+    </div>
+    
+    <div class="form_row">
+      <label for="password">Password:</label>
+      <%= f.password_field :password, :size => 20, :maxlength => 12 %>
+    </div>
+    
+    <div class="form_row">
+      <p><%= f.submit "Log In" %></p>
+    </div>
+  </fieldset>
+  
+<% end %>
+
+<p>
+    Not a member?  <a href="/yiku/user/register">Register Now!</a>
+</p>
+
+<% if ENV["RAILS_ENV"] == "development" %>
+      <div id="debug">
+        <a href="#" onclick="Element.toggle('params_debug_info');return false">
+        params</a> |
+        <a href="#" onclick="Element.toggle('session_debug_info');return false">
+        session</a> |
+        <a href="#" onclick="Element.toggle('env_debug_info');return false">
+        env</a> |
+        <a href="#" onclick="Element.toggle('request_debug_info');return false">
+        request</a>
+        <fieldset id="params_debug_info" class="debug_info" >
+          <legend>params</legend>
+          <%= debug(params) %>
+        </fieldset>
+        <fieldset id="session_debug_info" class="debug_info" style="display: none">
+          <legend>session</legend>
+          <%= debug(session) %>
+        </fieldset>
+        <fieldset id="env_debug_info" class="debug_info" style="display: none">
+          <legend>env</legend>
+          <%= debug(request.env) %>
+        </fieldset>
+        <fieldset id="request_debug_info" class="debug_info" style="display: none">
+          <legend>request</legend>
+          <%= debug(request) %>
+        </fieldset>
+      </div>
+    <% end %>

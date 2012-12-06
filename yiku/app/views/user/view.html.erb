@@ -1,0 +1,14 @@
+<h2>View your account</h2>
+<br/>
+ <fieldset>
+    <legend>Your basic information</legend>
+  <ul>
+    <li>Screen name: <%= @user.user_id %></li>
+    <li>Email: <%= @user.email %></li>
+    <li>Password: <%= @user.password %></li>
+  </ul>
+  <br/> 
+  <ul>
+    <li><%= link_to "Edit my info", :action => "edit" %></li>
+  </ul>
+ </fieldset>
