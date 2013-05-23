@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121012091511) do
+ActiveRecord::Schema.define(:version => 20121209134820) do
 
   create_table "bottoms", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,26 @@ ActiveRecord::Schema.define(:version => 20121012091511) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "user_id",             :null => false
+    t.string   "screen_name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "mobile"
+    t.string   "gender"
+    t.date     "birthday"
+    t.string   "occupation"
+    t.string   "cur_place"
+    t.string   "blog_url"
+    t.string   "face_url"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "roles", :force => true do |t|
@@ -115,13 +135,8 @@ ActiveRecord::Schema.define(:version => 20121012091511) do
 
   create_table "users", :force => true do |t|
     t.string   "user_id"
-    t.string   "nick_name"
     t.string   "password"
     t.string   "email"
-    t.string   "mobile"
-    t.string   "blog_url"
-    t.string   "cur_place"
-    t.string   "face_url"
     t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -12,7 +12,7 @@ Yiku::Application.routes.draw do
   # with it to find the target page, meanwhile if in layouts there is a layout with
   # the same name as controller, the layout will be interpreted first then the page
   # So if match '/temp/' to 'items#blank', page not found will happen during runtime
-  match '/yiku/' => 'items#myyiku'
+  match '/yiku/' => 'items#showhome'
   
   # For User
   match '/yiku/user/register' => 'user#register'
@@ -24,6 +24,17 @@ Yiku::Application.routes.draw do
   match '/yiku/user/crt' => 'user#create'
   match '/yiku/user/upd-pwd' => 'user#update_password'
   match '/yiku/user/upd-info' => 'user#update_others' 
+  
+  # For Profile
+  match '/yiku/profile/edit' => 'profile#edit'
+  match '/yiku/profile/edit-logo' => 'profile#edit_logo'
+  match '/yiku/profile/upd' => 'profile#update'
+  match '/yiku/profile/update-logo' => 'profile#update_logo'
+  
+  # For Community
+  match '/yiku/community/search' => 'community#search'
+  # The route which will not displayed as a URL for end user
+  match '/yiku/community/find-friends' => 'community#find_friends'
   
   # For Hat
   match '/yiku/hat/showlist/' => 'hats#showlist'

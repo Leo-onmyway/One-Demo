@@ -1,0 +1,32 @@
+<br/>
+<%= form_for(@profile, :url=>{:action=>'update_logo'}, :multipart=>true) do |f| %>
+
+<fieldset>
+	<legend>
+		Personal Avatar
+	</legend>
+    
+    <div class="form_row">
+    	<label for="cur avatar">Current Avatar:</label> 
+       <%= image_tag @profile.avatar.url(:large) %>
+	</div>
+	
+
+	<div class="form_row">
+		<label for="new avatar">New Avatar:</label>  
+        <%= f.file_field :avatar %> 
+	</div>
+	
+
+	<div class="form_row">
+		<label for="gender">Avatar Size:</label>
+		<%= radio_button :avatar, "size", "small", :checked => true %> Small
+		<%= radio_button :avatar, "size", "large" %> Large
+	</div>
+
+	
+	<p>
+		<%= f.submit "Update" %>
+	</p>
+</fieldset>
+<% end %>

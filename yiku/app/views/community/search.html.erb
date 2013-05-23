@@ -1,0 +1,61 @@
+<div class="container">
+<br/>
+<fieldset>
+	
+<%= form_tag "/yiku/community/find-friends" do %>
+
+	<legend>
+		Search Friends
+	</legend>
+
+	<div class="form_row">
+		<%= select_tag :search_type, options_for_select([["选择搜索类型", ""], ["姓名", "1"], ["所在地", "2"]], {:include_blank => true}) %>
+		
+		<%= text_field_tag :search_string %>
+	</div>
+	
+	<%= submit_tag "search" %>
+	
+<% end %>
+
+</fieldset>
+
+
+<% if @profiles %>
+ <p>
+ 	<img src="/images/ico_search_1.png">
+ 	&nbsp;
+ 	Research Result: <%= @profiles.size %> Result(s)
+ </p>
+   <br/>
+    <% for profile in @profiles %>
+
+     <div class="result">
+      <div class="icoshow">	
+      <%= image_tag profile.face_url %>
+      </div>
+      <div class="briefinfo">
+      <p>
+      <b><%= profile.screen_name %></b>
+      </p>
+      <p>
+      <%= profile.last_name %>&nbsp;<%= profile.first_name %>
+      </p>
+      <p>
+      <%= profile.gender %>
+      </p>
+      </div>
+      <div class="addlink">
+      <p>
+       <a href=""><img src="/images/ico_add_1.png"/></a>
+      </p>
+      </div>
+    </div>
+     
+
+
+    <% end %>
+
+<% end %>
+
+</div>

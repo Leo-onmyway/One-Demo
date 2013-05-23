@@ -1,0 +1,74 @@
+<br/>
+<%= form_for(@profile, :url=>{:action=>'update'}) do |f| %>
+<fieldset>
+	<legend>
+		Personal Profile
+	</legend>
+
+	<div class="form_row">
+		<label for="first name">First Name:</label>
+		<%= f.text_field :first_name,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+	<div class="form_row">
+		<label for="last name">Last Name:</label>
+		<%= f.text_field :last_name,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+	<div class="form_row">
+		<label for="screen name">Screen Name:</label>
+		<%= f.text_field :screen_name,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+
+	<div class="form_row">
+		<label for="gender">Gender:</label>
+		<%= radio_button :profile, :gender, "Male" %> Male
+		<%= radio_button :profile, :gender, "Female" %> Female
+	</div>
+
+	<div class="form_row">
+		<label for="birthdate">Birthdate:</label>
+		<%= date_select :profile, :birthday,
+		:start_year => Profile::START_YEAR,
+		:end_year => Time.now.year,
+		:include_blank => true,
+		:order => [:month, :day, :year] %>
+	</div>
+
+	<div class="form_row">
+		<label for="mobile">Mobile:</label>
+		<%= f.text_field :mobile,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+
+	<div class="form_row">
+		<label for="occupation">Occupation:</label>
+		<%= f.text_field :occupation,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+
+	<div class="form_row">
+		<label for="current place">Current Place:</label>
+		<%= f.text_field :cur_place,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+
+	<div class="form_row">
+		<label for="blog url">My Blog:</label>
+		<%= f.text_field :blog_url,
+      :size => 20,
+      :maxlength => 30 %>
+	</div>
+
+	<p>
+		<%= f.submit "Update" %>
+	</p>
+</fieldset>
+<% end %>

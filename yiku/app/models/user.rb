@@ -32,6 +32,8 @@ class User < ActiveRecord::Base
                                  :message => "must be a valid email address" 
   }
   
+  # Association
+  has_one :profile
   
   # Log a user in.
   def login!(session)

@@ -36,4 +36,7 @@ Yiku::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  Paperclip.options[:command_path] = "/opt/local/bin"
+  
 end
